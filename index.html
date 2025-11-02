@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shivsadhan – Habit & Mind Rewriting System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">ॐ</div>
+      <div class="brand-text">
+        <h1>Shivsadhan</h1>
+        <p>Habit & Mind Rewriting System</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="#features">Features</a>
+      <a href="#preview">Preview</a>
+      <a href="#download" class="btn primary">Download</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero fade-in">
+      <div class="hero-left">
+        <h2 class="gold">Shivsadhan</h2>
+        <p class="lead">A printable habit tracker fused with daily mind-rewrite prompts — crafted to help you reprogram habits, ground your attention, and cultivate consistent sādhana.</p>
+        <ul class="bullets">
+          <li>Hybrid layout: Weekly dashboard + detailed daily template</li>
+          <li>7-day Mind Rewrite Prompts</li>
+          <li>Progress reflection chart for weekly growth</li>
+          <li>Printable and ready for pen & paper sādhanā</li>
+        </ul>
+        <p class="actions">
+          <a id="download" href="Shivsadhan_Habit_Tracker.pdf" download class="btn primary">Download PDF</a>
+          <a href="#preview" class="btn">Preview Template</a>
+        </p>
+      </div>
+      <aside class="hero-right preview fade-in">
+        <h3>Weekly Dashboard (Preview)</h3>
+        <p class="muted">Track your core habits across the week.</p>
+        <div class="preview-grid">
+          <div class="card">
+            <h4>Morning Sādhanā</h4>
+            <ul>
+              <li>Rise before sunrise</li>
+              <li>Meditation / Chanting</li>
+              <li>Gratitude journaling</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Evening Reflection</h4>
+            <ul>
+              <li>Journal reflection</li>
+              <li>Digital sunset</li>
+              <li>Light reading</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mind-rewrite">
+          <h4>7-day Mind Rewrite (Sample)</h4>
+          <div class="prompts">
+            <div>Day 1: I am the witness, not the storm.</div>
+            <div>Day 2: My habits shape my higher self.</div>
+            <div>Day 3: Calm mind, powerful life.</div>
+            <div>Day 4: I act from awareness, not impulse.</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="features" class="features fade-in">
+      <h3 class="gold">What you get</h3>
+      <div class="feature-grid">
+        <div class="feature card">
+          <h4>Printable Focus</h4>
+          <p>A clean A4 printable template for daily handwriting and ritualized practice.</p>
+        </div>
+        <div class="feature card">
+          <h4>Mind Rewrite Prompts</h4>
+          <p>Seven curated prompts to rewire thought patterns and develop steady attention.</p>
+        </div>
+        <div class="feature card">
+          <h4>Progress Reflection</h4>
+          <p>Weekly chart and questions to integrate learnings and plan growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta fade-in">
+      <div class="cta-inner">
+        <div>
+          <h4>Ready to begin your sādhana?</h4>
+          <p class="muted">Download the printable Shivsadhan tracker and start your 7-day mind rewrite journey.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="Shivsadhan_Habit_Tracker.pdf" download class="btn primary">Download PDF</a>
+          <a href="#howto" class="btn">How to use</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer fade-in">
+    <p>© Shivsadhan • Habit & Mind Rewriting System</p>
+    <p class="muted small">Place <code>Shivsadhan_Habit_Tracker.pdf</code> in the same folder as this site for the Download links to work.</p>
+  </footer>
+
+  <script>
+    // Simple fade-in on scroll
+    document.addEventListener('DOMContentLoaded', function () {
+      const faders = document.querySelectorAll('.fade-in');
+      const options = { threshold: 0.05 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+</body>
+</html>
